@@ -12,7 +12,7 @@ server = os.environ.get('DB_SERVER') #
 database = os.environ.get('DB_DATABASE') #
 username = os.environ.get('DB_USERNAME') #
 password = os.environ.get('DB_PASSWORD') #
-driver = '{ODBC Driver 18 for SQL Server}' # Asegúrate de que este driver esté disponible en Azure Linux App Service
+driver = '{ODBC Driver 17 for SQL Server}' # Asegúrate de que este driver esté disponible en Azure Linux App Service
 
 # Función para obtener una nueva conexión a la base de datos por cada petición o cuando se necesite
 def get_db_connection():
