@@ -14,6 +14,16 @@ username = os.environ.get('DB_USERNAME') #
 password = os.environ.get('DB_PASSWORD') #
 driver = '{ODBC Driver 17 for SQL Server}' # Asegúrate de que este driver esté disponible en Azure Linux App Service
 
+# --- Añade estas líneas para depuración ---
+print(f"DEBUG: DB_SERVER: {server}")
+print(f"DEBUG: DB_DATABASE: {database}")
+print(f"DEBUG: DB_USERNAME: {username}")
+print(f"DEBUG: DB_USERNAME: {password}")
+# Considera NO imprimir la contraseña directamente, pero si estás depurando
+# en un entorno controlado, puedes hacerlo para verificar que no esté vacía.
+# print(f"DEBUG: DB_PASSWORD: {password}")
+# ----------------------------------------
+
 # Función para obtener una nueva conexión a la base de datos por cada petición o cuando se necesite
 def get_db_connection():
     conn_str = f'DRIVER={driver};SERVER={server};PORT=1433;DATABASE={database};UID={username};PWD={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
