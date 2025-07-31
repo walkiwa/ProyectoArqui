@@ -18,7 +18,7 @@ driver = '{ODBC Driver 17 for SQL Server}' # Asegúrate de que este driver esté
 print(f"DEBUG: DB_SERVER: {server}")
 print(f"DEBUG: DB_DATABASE: {database}")
 print(f"DEBUG: DB_USERNAME: {username}")
-print(f"DEBUG: DB_USERNAME: {password}")
+#print(f"DEBUG: DB_USERNAME: {password}")
 # Considera NO imprimir la contraseña directamente, pero si estás depurando
 # en un entorno controlado, puedes hacerlo para verificar que no esté vacía.
 # print(f"DEBUG: DB_PASSWORD: {password}")
