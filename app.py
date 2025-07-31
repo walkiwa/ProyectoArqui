@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, session
 import pyodbc
 import os # Importar el módulo os para variables de entorno
 
+
 app = Flask(__name__)
 # Es mejor obtener la secret_key de una variable de entorno en producción
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'secreto_super_seguro_desarrollo') #
